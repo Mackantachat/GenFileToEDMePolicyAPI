@@ -1,0 +1,82 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="PDFReport.vsrepx" />
+    <None Remove="Report\CertCancerContaract.vsrepx" />
+    <None Remove="Report\HappySongkran66Report.vsrepx" />
+    <None Remove="Report\PANewYearReport.vsrepx" />
+    <None Remove="Report\PANewYearSafeTravel.vsrepx" />
+    <None Remove="Report\PASongkran.vsrepx" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Report\CertCancerContaract.vsrepx" />
+    <EmbeddedResource Include="Report\HappySongkran66Report.vsrepx" />
+    <EmbeddedResource Include="Report\PANewYearSafeTravel.vsrepx" />
+    <EmbeddedResource Include="Report\PASongkran.vsrepx" />
+    <EmbeddedResource Include="Report\PDFReport.vsrepx" />
+    <EmbeddedResource Include="Report\PANewYearReport.vsrepx" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DataAccessUtility.AspNetCore" Version="2.2.0" />
+    <PackageReference Include="DevExpress.Reporting.Core" Version="21.1.5" />
+    <PackageReference Include="ITUtility.AspNetCore" Version="2.2.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="RestSharp" Version="106.12.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.2" />
+    <PackageReference Include="System.ServiceModel.Duplex" Version="4.7.*" />
+    <PackageReference Include="System.ServiceModel.Http" Version="4.7.*" />
+    <PackageReference Include="System.ServiceModel.NetTcp" Version="4.7.*" />
+    <PackageReference Include="System.ServiceModel.Security" Version="4.7.*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\GenFileToEDMePolicyAPI.BusinessLogic\GenFileToEDMePolicyAPI.BusinessLogic.csproj" />
+    <ProjectReference Include="..\GenFileToEDMePolicyAPI.DataContact\GenFileToEDMePolicyAPI.DataContact.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Report\CertCancerContaract.cs">
+      <DependentUpon>CertCancerContaract.vsrepx</DependentUpon>
+    </Compile>
+    <Compile Update="Report\CertCancerContaract.Designer.cs">
+      <DependentUpon>CertCancerContaract.vsrepx</DependentUpon>
+    </Compile>
+    <Compile Update="Report\HappySongkran66Report.cs">
+      <DependentUpon>HappySongkran66Report.vsrepx</DependentUpon>
+    </Compile>
+    <Compile Update="Report\HappySongkran66Report.Designer.cs">
+      <DependentUpon>HappySongkran66Report.vsrepx</DependentUpon>
+    </Compile>
+    <Compile Update="Report\PANewYearSafeTravel.cs">
+      <DependentUpon>PANewYearSafeTravel.vsrepx</DependentUpon>
+    </Compile>
+    <Compile Update="Report\PANewYearSafeTravel.Designer.cs">
+      <DependentUpon>PANewYearSafeTravel.vsrepx</DependentUpon>
+    </Compile>
+    <Compile Update="Report\PASongkran.cs">
+      <DependentUpon>PASongkran.vsrepx</DependentUpon>
+    </Compile>
+    <Compile Update="Report\PASongkran.Designer.cs">
+      <DependentUpon>PASongkran.vsrepx</DependentUpon>
+    </Compile>
+    <Compile Update="Report\PDFReport.cs">
+      <DependentUpon>PDFReport.vsrepx</DependentUpon>
+    </Compile>
+    <Compile Update="Report\PDFReport.Designer.cs">
+      <DependentUpon>PDFReport.vsrepx</DependentUpon>
+    </Compile>
+    <Compile Update="Report\PANewYearReport.cs">
+      <DependentUpon>PANewYearReport.vsrepx</DependentUpon>
+    </Compile>
+    <Compile Update="Report\PANewYearReport.Designer.cs">
+      <DependentUpon>PANewYearReport.vsrepx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+</Project>
